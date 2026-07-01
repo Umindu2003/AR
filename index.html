@@ -6,24 +6,22 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     
-    <!-- AR.js automatically turns your mobile camera into the background! -->
     <a-scene embedded arjs>
-      <a-assets>
-        <a-asset-item id="anime-girl" src="anime.glb"></a-asset-item>
-      </a-assets>
       
-      <!-- Notice there is NO <a-marker> here! 
-           We just put her slightly down (Y = -1) and 3 meters in front of the camera (Z = -3) -->
-      <a-entity 
-        gltf-model="#anime-girl" 
-        scale="1 1 1" 
-        position="0 -1 -3" 
+      <a-assets>
+        <a-asset-item id="aqua-model" src="aqua.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity
+        gltf-model="#aqua-model"
+        scale="1 1 1"
+        position="0 -1 -3"
         rotation="0 0 0">
       </a-entity>
-      
-      <!-- The look-controls use your phone's gyroscope to let you look around her! -->
+
       <a-entity camera look-controls></a-entity>
+      
     </a-scene>
-    
+
   </body>
 </html>
